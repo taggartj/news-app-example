@@ -1,0 +1,16 @@
+
+{%if search_providers|length != 1 %}
+<h4>Sourses:</h4>
+{% else %}
+<h4>Sourse:</h4>
+{% endif %}
+
+
+{% for lab in search_providers %}
+  {{lab}} <br/>
+{% endfor %}
+
+
+<div id="savedResults">
+  
+</div>

@@ -1,0 +1,31 @@
+
+news_admin.search_controller_search:
+  path: '/news-search'
+  defaults:
+    _controller: '\Drupal\news_admin\Controller\SearchController::search'
+    _title: 'search'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+
+news_admin.autocomplete:
+  path: '/news-search/autocomplete-topic'
+  defaults:
+    _controller: '\Drupal\news_admin\Controller\SearchController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+
+news_admin.news_admin_config_form:
+  path: '/admin/news-admin-config'
+  defaults:
+    _form: '\Drupal\news_admin\Form\NewsAdminConfigForm'
+    _title: 'News Admin Config'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

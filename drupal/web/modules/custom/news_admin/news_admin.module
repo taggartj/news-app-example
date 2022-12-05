@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Contains news_admin.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function news_admin_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the news_admin module.
+    case 'help.page.news_admin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function news_admin_theme() {
+  $theme = [];
+  $theme['news_search'] = [
+      'render element' => 'children',
+      'variables' => [
+        'search_providers' => [],
+      ],
+    ];
+    return $theme;
+}
+
+/**
+ * Helper to get this modules' config.
+ *
+ * @param $key
+ *  optional config key.
+ *
+ * @return mixed
+ *   returns array of values or single value
+ */
+function _news_admin_get_config($key = null) {
+  $config = \Drupal::config('news_admin.plugins');
+  $data = $config->getRawData();
+  if (!empty($key) && !empty($data[$key])) {
+    return $data[$key];
+  }
+  return $data;
+}

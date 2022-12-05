@@ -1,0 +1,11 @@
+.auto_comp_res {
+    background-color: #ccc;
+    padding: 10px;
+}
+
+
+.ui-menu-item .ui-menu-item-wrapper.ui-state-active {
+    background: #6693bc !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+} 

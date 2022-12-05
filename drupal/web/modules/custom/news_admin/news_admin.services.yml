@@ -1,0 +1,11 @@
+services:
+  plugin.manager.news_api_consumer_plugin:
+    class: Drupal\news_admin\Plugin\NewsApiConsumerPluginManager
+    parent: default_plugin_manager
+
+  logger.channel.news_admin:
+    parent: logger.channel_base
+    arguments: ['news_admin']
+  news_admin.api_service:
+    class: Drupal\news_admin\ApiService
+    arguments: ['@http_client', '@entity_type.manager', '@plugin.manager.news_api_consumer_plugin']

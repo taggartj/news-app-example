@@ -1,0 +1,18 @@
+news_search:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/search.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupal.autocomplete
+
+my_autocomplete:
+  js:
+    js/autocomplete.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
