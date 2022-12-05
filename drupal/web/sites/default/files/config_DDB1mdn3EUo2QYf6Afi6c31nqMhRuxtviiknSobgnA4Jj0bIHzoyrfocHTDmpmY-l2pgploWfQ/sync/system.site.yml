@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: 9097a285-b14b-4f60-b547-28a059483d1f
+name: 'News App'
+mail: tech@portable.com.au
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /news-search
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

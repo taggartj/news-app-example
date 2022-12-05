@@ -71,3 +71,36 @@ if you have a solid reason for them.
   touches are *entirely* optional. Some developers prefer to leave the
   design to designers, some get a kick out of making things *just so*.
   We like both kinds.
+
+--- 
+## How to run what I did
+
+if not starting from scratch after this is installed and running best to pop in to the docker shell 
+run:
+```docker exec -it portable_news_app bash```
+
+Run the following and go get a coffie ... 
+```composer install```
+
+
+after this you can change directory in to the drupal web root 
+run:
+``` cd web`` 
+
+then please run the following to inport the drupal config and clear drupals cache:
+``` drush cim -y && drush cr``` 
+
+Configuration:
+
+once logged in as an admin please goto:
+
+(localhost:8080) /admin/news-admin-config 
+to select your search providers and press save
+
+then you can head back to the home page or 
+
+(localhost:8080) /news-search
+
+and Search for terms you are intrested in.
+
+
