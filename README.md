@@ -85,21 +85,22 @@ Run the following and go get a coffie ...
 
 after this you can change directory in to the drupal web root 
 run:
-``` cd web`` 
+``` cd web```
 
 then please run the following to inport the drupal config and clear drupals cache:
-``` drush cim -y && drush cr``` 
+``` drush cim -y && drush cr ``` 
 
 Configuration:
 
 once logged in as an admin please goto:
 
 (localhost:8080) /admin/news-admin-config 
-to select your search providers and press save
 
-then you can head back to the home page or 
+to select your search providers and press save then you can head back to the home page or:
+ 
 
 (localhost:8080) /news-search
+
 
 and Search for terms you are intrested in.
 
